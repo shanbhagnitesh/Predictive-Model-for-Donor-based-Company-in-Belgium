@@ -66,11 +66,11 @@ auc = function(trueval, predval){
 }
 
 # List all the Predictions files for both the algorithms
-pred_files <- list.files("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/output_predicted/")
-pred_files <- paste0("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/output_predicted/", pred_files)
+pred_files <- list.files("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/output_predicted/")
+pred_files <- paste0("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/output_predicted/", pred_files)
 
-pred_files_mixed <- list.files("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/output_predicted - Mixed/")
-pred_files_mixed <- paste0("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/output_predicted - Mixed/", pred_files_mixed)
+pred_files_mixed <- list.files("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/output_predicted - Mixed/")
+pred_files_mixed <- paste0("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/output_predicted - Mixed/", pred_files_mixed)
 
 # Take only training files
 pred_files_train <- pred_files[grepl(".train.",pred_files)]
@@ -149,8 +149,8 @@ final_predictions_train <- data.frame("dependant" = train$dependant,
                                      "Undersampling_0.4" = pred_data_0.4_train$p_1,
                                      "Undersampling_0.5" = pred_data_0.5_train$p_1,
                                      "Mixed_Sampling" = pred_data_mixed_train$p_1)
-write.csv(final_predictions_test, file="C:/Users/schauhan/Downloads/Machine_Learning/Final Project/final_predictions_test.csv", row.names=F)
-write.csv(final_predictions_train, file="C:/Users/schauhan/Downloads/Machine_Learning/Final Project/final_predictions_train.csv", row.names=F)
+write.csv(final_predictions_test, file="C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/final_predictions_test.csv", row.names=F)
+write.csv(final_predictions_train, file="C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/final_predictions_train.csv", row.names=F)
 
 # Calculating performance parameters - Test
 df_0.4_test <- calculate_performance_params("Undersampling_0.4",final_predictions_test)
@@ -178,7 +178,7 @@ final_performance_test$Data_Type <- "Test"
 final_performance_train <- rbind(df_0.4_train,df_0.5_train,df_mixed_train)
 final_performance_train$Data_Type <- "Train"
 final_performance <- rbind(final_performance_test,final_performance_train)
-write.csv(final_performance, file="C:/Users/schauhan/Downloads/Machine_Learning/Final Project/final_performance1.csv", row.names=F)
+write.csv(final_performance, file="C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/final_performance1.csv", row.names=F)
 
 # Create Gains and Lift Curve
 pred_0.4 <- prediction(final_predictions_test$Undersampling_0.4, final_predictions_test$dependant)
