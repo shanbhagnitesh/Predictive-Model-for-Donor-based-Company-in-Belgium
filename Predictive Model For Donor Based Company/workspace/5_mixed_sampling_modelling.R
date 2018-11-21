@@ -14,19 +14,19 @@ library(ROSE)
 # create_output_file_path - Function to create output path
 create_output_file_path <- function(cv_id,cvrun_id,under_rate){
   fileTrainPathPred <-
-    paste0("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/output_predicted - Mixed/",
+    paste0("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/output_predicted - Mixed/",
            "unb2_cv",cv_id,
            "train",cvrun_id,
            "_p.csv")
   
   fileTestPathPred <-
-    paste0("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/output_predicted - Mixed/",
+    paste0("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/output_predicted - Mixed/",
            "unb2_cv",cv_id,
            "test",cvrun_id,
            "_p.csv")
   
   filePathAUC <-
-    paste0("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/output_auc - Mixed/",
+    paste0("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/output_auc - Mixed/",
            "unb2_cv",cv_id,
            "run",cvrun_id,
            "_AUC.csv")
