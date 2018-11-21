@@ -11,16 +11,16 @@ library(lubridate)
 library(caret)
 
 # Read the training data
-campaign_train <- read_delim("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/data/campaign20140115.csv", 
+campaign_train <- read_delim("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/data/campaign20140115.csv", 
                              ";", escape_double = FALSE, trim_ws = TRUE)
 
 # Read the donors data
-donors <- read_delim("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/data/donors.csv", 
+donors <- read_delim("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/data/donors.csv", 
                      ";", escape_double = FALSE, na = "Missing", 
                      trim_ws = TRUE)
 
 # Read the gifts data
-gifts <- read_delim("C:/Users/schauhan/Downloads/Machine_Learning/Final Project/data/gifts.csv", 
+gifts <- read_delim("C:/Users/Nitesh_Shanbhag/Downloads/Machine_Learning/Final Project/data/gifts.csv", 
                     ";", escape_double = FALSE, col_types = cols(date = col_date(format = "%d/%m/%Y")), 
                     trim_ws = TRUE)
 
